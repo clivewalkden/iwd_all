@@ -2,19 +2,19 @@
 <config>
     <modules>
         <IWD_All>
-            <version>2.0.4</version>
+            <version>2.1.0</version>
         </IWD_All>
     </modules>
 
     <admin>
         <routers>
-            <iwdall>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>IWD_All</module>
-                    <frontName>iwdall</frontName>
+                    <modules>
+                        <iwdall after="Mage_Adminhtml">IWD_All_Adminhtml</iwdall>
+                    </modules>
                 </args>
-            </iwdall>
+            </adminhtml>
         </routers>
     </admin>
 

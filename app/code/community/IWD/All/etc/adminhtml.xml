@@ -9,14 +9,9 @@
                     <children>
                         <support>
                             <title>Support</title>
-                            <sort_order>10</sort_order>
-                            <action>iwdall/adminhtml_support</action>
+                            <sort_order>0</sort_order>
+                            <action>adminhtml/iwd_all_support/index</action>
                         </support>
-                        <!--<conflicts translate="title" module="iwdall">
-                            <title>Extensions Conflict</title>
-                            <sort_order>20</sort_order>
-                            <action>iwdall/adminhtml_conflicts</action>
-                        </conflicts>-->
                     </children>
                 </iwdall>
             </children>

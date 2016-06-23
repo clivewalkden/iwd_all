@@ -1,5 +1,5 @@
 <?php
-class IWD_All_Adminhtml_SupportController extends Mage_Adminhtml_Controller_Action
+class IWD_All_Adminhtml_Iwd_All_SupportController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {

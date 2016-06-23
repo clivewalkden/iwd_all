@@ -71,7 +71,7 @@ class IWD_All_Block_Adminhtml_Support_Edit_Form extends Mage_Adminhtml_Block_Wid
             'value' => $helper->__('Send request'),
         ));
 
-        echo '<div style="display:none">' . Mage::helper("adminhtml")->getUrl("*/adminhtml_conflicts") . '</div>';
+        echo '<div style="display:none">' . Mage::helper("adminhtml")->getUrl("adminhtml/iwd_all_conflicts/index") . '</div>';
 
         if (Mage::registry('iwdall')) {
             $form->setValues(Mage::registry('iwdall')->getData());
