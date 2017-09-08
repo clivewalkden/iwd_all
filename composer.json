@@ -1,7 +1,7 @@
 {
 	"name": "clivewalkden/iwd_all",
 	"description": "IWD Agencies base plugin required by their Magento 1 modules",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"type": "magento-module",
 	"keywords": [
 		"Magento Plugin",

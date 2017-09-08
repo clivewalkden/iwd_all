@@ -18,4 +18,4 @@ modman clone https://github.com/clivewalkden/iwd_all
 ```
 
 ## Notes
-IWD, changed the versioning of the plugin from 2.1 back down to 1.2 (possibly for a future Magento 2 version?)
+IWD, changed the versioning of the plugin from 2.1 back down to 1.2 (possibly for a future Magento 2 version and only in the package.xml, module config.xml lists 2.x?)

@@ -1,4 +1,5 @@
 <?php
+
 class IWD_All_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const TO_EMAIL = 'extensions@iwdagency.com';
@@ -139,8 +140,9 @@ class IWD_All_Helper_Data extends Mage_Core_Helper_Abstract
             'pdo_mysql',
             'simplexml'
         );
-        foreach ($extensions as $extension)
+        foreach ($extensions as $extension) {
             $this->AddRowTable($extension, extension_loaded($extension));
+        }
     }
 
     private function AddRowTable($column1, $column2 = "")
@@ -170,7 +172,7 @@ class IWD_All_Helper_Data extends Mage_Core_Helper_Abstract
                 $newFilePath = "./media/downloadable/" . $attachment ['name'] [$i];
                 if (move_uploaded_file($tmpFilePath, $newFilePath)) {
                     $fname = $attachment ['name'] [$i];
-                    $at = new Zend_Mime_Part (file_get_contents($newFilePath));
+                    $at = new Zend_Mime_Part(file_get_contents($newFilePath));
                     $at->disposition = Zend_Mime::DISPOSITION_INLINE;
                     $at->encoding = Zend_Mime::ENCODING_BASE64;
                     $at->filename = $fname;
@@ -189,12 +191,14 @@ class IWD_All_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getAuthorizenetTrackingCode()
     {
-        if(Mage::helper('core')->isModuleEnabled('IWD_POS'))
+        if (Mage::helper('core')->isModuleEnabled('IWD_POS')) {
             return 'A1000128';
+        }
         return 'A1000127';
     }
 
-    public function isEnterprise(){
+    public function isEnterprise()
+    {
         return Mage::getConfig()->getModuleConfig('Enterprise_Enterprise') && Mage::getConfig()->getModuleConfig('Enterprise_AdminGws') && Mage::getConfig()->getModuleConfig('Enterprise_Checkout') && Mage::getConfig()->getModuleConfig('Enterprise_Customer');
     }
 }
